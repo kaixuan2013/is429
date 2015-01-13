@@ -12,7 +12,7 @@
 
     <!-- CHAT MARKUP -->
     <div class='example-chat l-demo-container'>
-      <header>Whats Your Fav Movie?</header>
+      <header>Favourite Movie</header>
 
       <div class='example-chat-toolbar'>
         <label for='nameInput'>Username:</label>
@@ -29,10 +29,6 @@
       <footer>
         <input ng-model='msg' ng-keydown="addMessage($event)" type='text' id='messageInput'  placeholder='Whats Your Favourite Movie?'>
       </footer>
-    </div>
-
-    <div>
-<p align="center"><a href="http://rcmyap.github.io/myrepo/wk2.html">Visit Rachel</a></p>
     </div>
 
     <script>
@@ -56,7 +52,7 @@
 
               //ADD TO FIREBASE
               $scope.messages.$add({
-                from: name
+                from: name,
                 body: $scope.msg
               });
 
