@@ -12,7 +12,7 @@
 
     <!-- CHAT MARKUP -->
     <div class='example-chat l-demo-container'>
-      <header>Favourite Movie</header>
+      <header>Whats Your Fav Movie?</header>
 
       <div class='example-chat-toolbar'>
         <label for='nameInput'>Username:</label>
@@ -31,13 +31,17 @@
       </footer>
     </div>
 
+    <div>
+<p align="center"><a href="http://rcmyap.github.io/myrepo/wk2.html">Visit Rachel</a></p>
+    </div>
+
     <script>
       var myApp = angular.module("myApp", ["firebase"]);
 
       myApp.controller('MyController', ['$scope', '$firebase',
         function($scope, $firebase) {
           //CREATE A FIREBASE REFERENCE
-          var ref = new Firebase("ngkaixuan.firebaseapp.com");
+          var ref = new Firebase("https://ngkaixuan.firebaseio.com/");
 
           // GET MESSAGES AS AN ARRAY
           $scope.messages = $firebase(ref).$asArray();
@@ -52,7 +56,7 @@
 
               //ADD TO FIREBASE
               $scope.messages.$add({
-                from: name,
+                from: name
                 body: $scope.msg
               });
 
