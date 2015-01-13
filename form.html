@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="anotherApp">
+<html ng-app="myApp">
   <head>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
@@ -12,7 +12,7 @@
 
     <!-- CHAT MARKUP -->
     <div class='example-chat l-demo-container'>
-      <header>Whats Your Fav Movie?</header>
+      <header>Whats your favourite Movie?</header>
 
       <div class='example-chat-toolbar'>
         <label for='nameInput'>Username:</label>
@@ -36,9 +36,9 @@
     </div>
 
     <script>
-      var anotherApp = angular.module("anotherApp", ["firebase"]);
+      var myApp = angular.module("myApp", ["firebase"]);
 
-      anotherApp.controller('MyController', ['$scope', '$firebase',
+      myApp.controller('MyController', ['$scope', '$firebase',
         function($scope, $firebase) {
           //CREATE A FIREBASE REFERENCE
           var ref = new Firebase("https://ngkaixuan.firebaseio.com/");
