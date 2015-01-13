@@ -23,10 +23,9 @@
         <input ng-model='email' type='text' id='emailInput' placeholder='Enter Your Email:'>
       </div>
 
-                  <div class='example-chat-toolbar'>
-        <label for='emailInput'>Type a short message:</label>
-        <input ng-model='message' type='text' id='messageInput' placeholder='Enter Your Message:'>
-      </div>
+      <footer>
+        <input ng-model='msg' ng-keydown="addMessage($event)" type='text' id='messageInput'  placeholder='Type a short message...'>
+      </footer>
 
       <p>Link to Rachel's Website</p>
 
