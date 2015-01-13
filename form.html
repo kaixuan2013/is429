@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="myApp">
+<html ng-app="anotherApp">
   <head>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
@@ -36,9 +36,9 @@
     </div>
 
     <script>
-      var myApp = angular.module("myApp", ["firebase"]);
+      var anotherApp = angular.module("anotherApp", ["firebase"]);
 
-      myApp.controller('MyController', ['$scope', '$firebase',
+      anotherApp.controller('MyController', ['$scope', '$firebase',
         function($scope, $firebase) {
           //CREATE A FIREBASE REFERENCE
           var ref = new Firebase("https://ngkaixuan.firebaseio.com/");
